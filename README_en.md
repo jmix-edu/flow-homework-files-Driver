@@ -1,31 +1,31 @@
 ### Prepared project
-The project contains set of prepared elements related to "storing drivers data" area:
+This project contains set of prepared elements related to "storing drivers data" area:
 - Driver, LicenseInfo, and Document entities
-- Views for drivers listing and editing, as well as for their license and documents.
+- Views for drivers listing and editing, as well as for their licenses and documents.
 
 ### Task
-In this homework task you need to add to the model new attributes, that will be used to storing files with data, and support these attributes inside the application's UI.
+In this homework assignment, you will need to add new attributes to the model that will be used to store data files, and maintain these attributes within the application's user interface.
 
-#### 1. Driver's photo
+#### 1. Driver photo
 Storing, uploading and showing the photo using byte[] data type.
 
 - Add to the Driver entity new attribute: name - photo, datatype - byte[].
-- Add to DriverDetailView components for photo uploading, as well as for uploaded photo demonstration.
-- Upload field must limit allowed files extensions - only PNG and JPG
+- Add to DriverDetailView the necessary components for uploading photos, as well as for displaying uploaded photos.
+– The upload field should limit allowed file extensions to PNG and JPG only.
 - Image display component settings:
-    - Place it on the right side of form.
-    - Set up component's size (max 300 X 300 px) and scaling mode.
-    - (*) (Optional) hide the component when photo was not uploaded yet or after photo deletion.
+    - Place it to the right of the existing form.
+    - Adjust the component size (maximum 300 X 300 pixels) and scaling mode.
+    - (*) (Optional) hide the component if the photo has not yet been loaded or after deleting the photo.
 
-**NOTE**: In real production application for storing files bigger than 1000 Bytes - FileRef data type must be preferred over byte[] and highly recommended to use.
+**NOTE**. In a real production application, for storing files larger than 1000 bytes, the FileRef data type should be preferred over byte[] and is highly recommended.
 
 #### 2. Driver documents
-Storing, up and downloading of driver documents (driver license, insurance, passport, etc.), using FileRef data type.
+Storing, uploading and downloading driver documents (driver's license, insurance, passport, etc.) using the FileRef data type.
 
-- Add to the Document entity new attribute - name - file, data type - FileRef.
+- Add to the Document entity new attribute: - name - file, data type - FileRef.
 - Add to Document detail view new component for the file upload.
-- Add to Driver detail view inner table, that contains documents themselves, new functionality for documents preview and download.
-  Task is achievable with Renderer usage.
-    - Use LinkButton as returning component.
+- Add new functionality to the internal driver details view table containing the documents themselves, for previewing and downloading documents.
+  The task is achievable using Renderer.
+    - Use JmixButton as returning component.
     - Link name - document's filename.
-    - When link is clicked - initialize the document file preview in browser/downloading.
+    - When a link button is clicked - initiates a preview of the document file in the browser or downloads it.
